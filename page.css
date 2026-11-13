@@ -98,7 +98,7 @@ nav.main li:hover>.dd,nav.main li:focus-within>.dd{display:flex!important}
 .dots{position:absolute;left:0;right:0;bottom:28px;display:flex;gap:6px;justify-content:center;z-index:3}
 .dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(255,255,255,.35);cursor:pointer;transition:width .3s,background .3s}
 .dots button.on{width:28px;background:var(--violet)}
-.divider{height:60px;background:#000 url("assets/divider-glow.webp") center/cover no-repeat;margin-block:-1px}
+.divider{height:3px;background:#000 url("assets/divider-glow.webp") center/cover no-repeat;margin-block:-1px}
 .divider.flip{transform:scaleY(-1)}
 .promo-sec{position:relative;background:#020202;isolation:isolate}
 
@@ -251,7 +251,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 @media (max-width:640px){
   .slide{padding-block:32px 64px}
 
-  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .wrap{position:relative;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
   section{padding-block:56px}
   .g5,.g4{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .ttl{font-size:13px}
