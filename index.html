@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HERNZ TCG</title>
+<link rel="icon" type="image/webp" href="assets/hernz-logo.webp">
+<meta name="description" content="Veteran-owned trading card shop. Pokémon, Yu-Gi-Oh!, and One Piece singles, graded slabs, vintage and Japanese cards. New cards added daily.">
+<script src="motion.js"></script>
+<link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<header>
+  <div class="wrap hdr">
+    <div class="l">
+      <button class="icon burger" aria-label="Open menu" aria-expanded="false" id="burger">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <a class="icon" href="#shop" aria-label="Search cards" id="searchBtn">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </a>
+    </div>
+    <a href="#top" class="logo" aria-label="HERNZ TCG home"><img class="logoimg" src="assets/hernz-logo.webp" alt="HERNZ TCG" width="640" height="428"></a>
+    <div class="r">
+      <a class="icon" href="https://www.ebay.com/str/hernztcg?_tab=feedback" target="_blank" rel="noopener" aria-label="Seller feedback">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+      </a>
+      <a class="icon" href="https://www.ebay.com/str/hernztcg" target="_blank" rel="noopener" aria-label="Open the eBay store">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>
+      </a>
+    </div>
+  </div>
+  <nav class="main" aria-label="Main">
+    <ul class="wrap">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#featured">Pokémon ▾</a>
+        <ul class="dd">
+          <li><a href="#featured">Featured singles</a></li>
+          <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Japanese/_i.html?store_cat=86415795013">Japanese</a></li>
+          <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Vintage/_i.html?store_cat=86415794013">Vintage</a></li>
+          <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Graded-Cards/_i.html?store_cat=86415793013">Graded cards</a></li>
+          <li><a href="#sets">Shop by set</a></li>
+        </ul>
+      </li>
+      <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Yu-Gi-Oh/_i.html?store_cat=86422975013">Yu-Gi-Oh!</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/One-Piece/_i.html?store_cat=86422976013">One Piece</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Graded-Cards/_i.html?store_cat=86415793013">Graded</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/0-99-Cards/_i.html?store_cat=86427469013">$0.99 Cards</a></li>
+      <li><a href="#about">Store Info</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+  <div class="drawer" id="drawer">
+    <div class="wrap">
+      <a href="#top">Home</a>
+      <a href="#featured">Pokémon</a>
+      <a class="sub" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Japanese/_i.html?store_cat=86415795013">Japanese</a>
+      <a class="sub" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Vintage/_i.html?store_cat=86415794013">Vintage</a>
+      <a class="sub" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Graded-Cards/_i.html?store_cat=86415793013">Graded cards</a>
+      <a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Yu-Gi-Oh/_i.html?store_cat=86422975013">Yu-Gi-Oh!</a>
+      <a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/One-Piece/_i.html?store_cat=86422976013">One Piece</a>
+      <a href="#about">Store Info</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-roledescription="carousel" style="padding:0">
+  <div class="hbg" aria-hidden="true"><div class="hl h-base"></div><div class="hl h-smoke"></div><div class="hl h-bolt l"></div><div class="hl h-bolt r"></div></div>
+  <canvas class="sparks fx-sparks" data-n="70" id="sparks" aria-hidden="true"></canvas>
+  <div class="slide s-banner on" aria-label="Slide 1 of 2">
+    <div class="wrap" style="display:grid;justify-items:center">
+      <div class="bannerwrap"><img src="assets/hernz-banner.png" alt="HERNZ TCG, Pokémon TCG vending and collectibles" width="1050" height="600"></div>
+      <div class="ctas">
+        <a class="btn btn-v" href="#featured">Shop Pokémon</a>
+        <a class="btn btn-o" href="https://www.ebay.com/sch/i.html?_ssn=emiliohernz&store_name=hernztcg&_sop=10" target="_blank" rel="noopener">Newly listed</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide s-copy" aria-label="Slide 2 of 2">
+    <div class="wrap hero-copy">
+      <div class="crown" aria-hidden="true"></div>
+      <div class="eyebrow">Veteran-owned · New cards daily</div>
+      <h1>Your next <span class="v">chase card</span><br>is waiting.</h1>
+      <p>Pokémon, Yu-Gi-Oh! and One Piece singles, PSA &amp; CGC slabs, vintage WOTC and Japanese imports. Singles from 99¢.</p>
+      <div class="ctas">
+        <a class="btn btn-v" href="#featured">Shop now</a>
+        <a class="btn btn-o" href="#cats">Shop by game</a>
+      </div>
+    </div>
+  </div>
+  <div class="dots" id="dots"><button class="on" aria-label="Show slide 1"></button><button aria-label="Show slide 2"></button></div>
+</section>
+<div class="divider" aria-hidden="true"></div>
+
+<!-- FEATURED -->
+<section id="featured">
+  <div class="wrap">
+    <div class="shead rv">
+      <h2>Featured Products</h2>
+      <a class="va" href="https://www.ebay.com/str/hernztcg/Collector-Favorites/_i.html?store_cat=86415796013" target="_blank" rel="noopener">View all →</a>
+    </div>
+    <div class="grid g5" id="featGrid"></div>
+  </div>
+</section>
+
+<!-- GAMES -->
+<section id="cats" style="padding-top:8px">
+  <div class="wrap">
+    <div class="tiles rv">
+      <a class="tile" href="#featured"><div class="tfx" aria-hidden="true"><img class="t-base" src="assets/cat-base.webp" alt="" loading="lazy" width="800" height="800"><img class="t-smoke" src="assets/cat-smoke.webp" alt="" loading="lazy" width="600" height="600"><img class="t-bolt l" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><img class="t-bolt r" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><canvas class="fx-sparks" data-n="22"></canvas><i class="t-floor"></i><img class="t-title" src="assets/cat-pokemon-title.webp" alt="" loading="lazy" width="800" height="800"><i class="t-glint" style="--m:url('assets/cat-pokemon-title.webp')"></i></div><span class="sr">Pokémon</span></a>
+      <a class="tile" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Yu-Gi-Oh/_i.html?store_cat=86422975013"><div class="tfx" aria-hidden="true"><img class="t-base" src="assets/cat-base.webp" alt="" loading="lazy" width="800" height="800"><img class="t-smoke" src="assets/cat-smoke.webp" alt="" loading="lazy" width="600" height="600"><img class="t-bolt l" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><img class="t-bolt r" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><canvas class="fx-sparks" data-n="22"></canvas><i class="t-floor"></i><img class="t-title" src="assets/cat-yugioh-title.webp" alt="" loading="lazy" width="800" height="800"><i class="t-glint" style="--m:url('assets/cat-yugioh-title.webp')"></i></div><span class="sr">Yu-Gi-Oh!</span></a>
+      <a class="tile" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/One-Piece/_i.html?store_cat=86422976013"><div class="tfx" aria-hidden="true"><img class="t-base" src="assets/cat-base.webp" alt="" loading="lazy" width="800" height="800"><img class="t-smoke" src="assets/cat-smoke.webp" alt="" loading="lazy" width="600" height="600"><img class="t-bolt l" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><img class="t-bolt r" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><canvas class="fx-sparks" data-n="22"></canvas><i class="t-floor"></i><img class="t-title" src="assets/cat-onepiece-title.webp" alt="" loading="lazy" width="800" height="800"><i class="t-glint" style="--m:url('assets/cat-onepiece-title.webp')"></i></div><span class="sr">One Piece</span></a>
+      <a class="tile" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Graded-Cards/_i.html?store_cat=86415793013"><div class="tfx" aria-hidden="true"><img class="t-base" src="assets/cat-base.webp" alt="" loading="lazy" width="800" height="800"><img class="t-smoke" src="assets/cat-smoke.webp" alt="" loading="lazy" width="600" height="600"><img class="t-bolt l" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><img class="t-bolt r" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><canvas class="fx-sparks" data-n="22"></canvas><i class="t-floor"></i><img class="t-title" src="assets/cat-graded-title.webp" alt="" loading="lazy" width="800" height="800"><i class="t-glint" style="--m:url('assets/cat-graded-title.webp')"></i></div><span class="sr">Graded cards</span></a>
+    </div>
+    <div class="tiles more rv" style="--d:.1s">
+      <a class="tile" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Japanese/_i.html?store_cat=86415795013"><div class="tfx" aria-hidden="true"><img class="t-base" src="assets/cat-base.webp" alt="" loading="lazy" width="800" height="800"><img class="t-smoke" src="assets/cat-smoke.webp" alt="" loading="lazy" width="600" height="600"><img class="t-bolt l" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><img class="t-bolt r" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><canvas class="fx-sparks" data-n="22"></canvas><i class="t-floor"></i><img class="t-title" src="assets/cat-japanese-title.webp" alt="" loading="lazy" width="800" height="800"><i class="t-glint" style="--m:url('assets/cat-japanese-title.webp')"></i></div><span class="sr">Japanese</span></a>
+      <a class="tile" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Vintage/_i.html?store_cat=86415794013"><div class="tfx" aria-hidden="true"><img class="t-base" src="assets/cat-base.webp" alt="" loading="lazy" width="800" height="800"><img class="t-smoke" src="assets/cat-smoke.webp" alt="" loading="lazy" width="600" height="600"><img class="t-bolt l" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><img class="t-bolt r" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><canvas class="fx-sparks" data-n="22"></canvas><i class="t-floor"></i><img class="t-title" src="assets/cat-vintage-title.webp" alt="" loading="lazy" width="800" height="800"><i class="t-glint" style="--m:url('assets/cat-vintage-title.webp')"></i></div><span class="sr">Vintage</span></a>
+      <a class="tile" target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/0-99-Cards/_i.html?store_cat=86427469013"><div class="tfx" aria-hidden="true"><img class="t-base" src="assets/cat-base.webp" alt="" loading="lazy" width="800" height="800"><img class="t-smoke" src="assets/cat-smoke.webp" alt="" loading="lazy" width="600" height="600"><img class="t-bolt l" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><img class="t-bolt r" src="assets/cat-bolts.webp" alt="" loading="lazy" width="800" height="800"><canvas class="fx-sparks" data-n="22"></canvas><i class="t-floor"></i><img class="t-title" src="assets/cat-99c-title.webp" alt="" loading="lazy" width="800" height="800"><i class="t-glint" style="--m:url('assets/cat-99c-title.webp')"></i></div><span class="sr">99¢ cards</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- BUNDLE -->
+<div class="divider" aria-hidden="true"></div>
+<section class="promo-sec">
+<div class="bandfx" aria-hidden="true"><div class="b-base"></div><div class="b-smoke"></div><canvas class="fx-sparks" data-n="40"></canvas></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="shead rv">
+      <div><div class="eyebrow">Bundle &amp; save</div><h2>Stack cards, save more</h2><p>Mix any eligible singles in one order. The discount applies at checkout on eBay.</p></div>
+      <a class="va" href="https://www.ebay.com/str/hernztcg/Cards-Under-5/_i.html?store_cat=86415792013" target="_blank" rel="noopener">Shop cards under $5 →</a>
+    </div>
+    <div class="bcards rv">
+      <div class="bc"><div class="top"><span class="tag">Any game</span><span class="tag open">Active now</span></div><div class="big">10<small>% off</small></div><dl><dt>Items</dt><dd>2 eligible cards</dd><dt>Applies</dt><dd>Automatically at checkout</dd></dl></div>
+      <div class="bc"><div class="top"><span class="tag">Any game</span><span class="tag open">Active now</span></div><div class="big">15<small>% off</small></div><dl><dt>Items</dt><dd>3 eligible cards</dd><dt>Applies</dt><dd>Automatically at checkout</dd></dl></div>
+      <div class="bc"><div class="top"><span class="tag">Best value</span><span class="tag open">Active now</span></div><div class="big">20<small>% off</small></div><dl><dt>Items</dt><dd>4 or more eligible cards</dd><dt>Applies</dt><dd>Automatically at checkout</dd></dl></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider flip" aria-hidden="true"></div>
+
+<!-- SHOP -->
+<section id="shop" style="padding-top:24px">
+  <div class="wrap">
+    <div class="shead rv">
+      <div><div class="eyebrow">In the binder</div><h2>Singles from 99¢</h2></div>
+      <a class="va" href="https://www.ebay.com/str/hernztcg" target="_blank" rel="noopener">See all listings →</a>
+    </div>
+    <div class="bar rv">
+      <label class="srch">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search Charizard, Lost Origin, Blue-Eyes…" aria-label="Search cards">
+      </label>
+      <div style="display:flex;gap:8px;flex-wrap:wrap" id="filters">
+        <button class="chip on" data-f="all">All</button>
+        <button class="chip" data-f="pokemon">Pokémon</button>
+        <button class="chip" data-f="yugioh">Yu-Gi-Oh!</button>
+        <button class="chip" data-f="graded">Graded</button>
+        <button class="chip" data-f="vintage">Vintage</button>
+        <button class="chip" data-f="budget">Under $5</button>
+      </div>
+      <select class="chip" id="sort" aria-label="Sort">
+        <option value="featured">Featured</option>
+        <option value="low">Price: low to high</option>
+        <option value="high">Price: high to low</option>
+      </select>
+    </div>
+    <div class="count" id="count"></div>
+    <div class="grid g4" id="shopGrid"></div>
+  </div>
+</section>
+
+<!-- SETS -->
+<section id="sets" style="padding-top:24px">
+  <div class="wrap">
+    <div class="shead rv"><div><div class="eyebrow">Complete your set</div><h2>Shop by set</h2></div></div>
+    <div id="setGroups" class="rv"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding-top:16px">
+  <div class="wrap">
+    <div class="about rv">
+      <div>
+        <div class="eyebrow">Store info</div>
+        <h2>Veteran-owned.<br><span class="v">Collector-run.</span></h2>
+        <p>HERNZ TCG sells Pokémon, Yu-Gi-Oh!, and One Piece cards, sealed product, and graded slabs, from affordable singles to vintage favorites, Japanese imports, and standout collector finds.</p>
+        <ul class="checks">
+          <li>New cards added every day</li>
+          <li>Real photos and clear condition notes</li>
+          <li>Orders ship within 2 business days</li>
+          <li>Questions answered through eBay messages</li>
+        </ul>
+        <div class="ctas" style="justify-content:flex-start">
+          <a class="btn btn-w" href="https://www.ebay.com/str/hernztcg" target="_blank" rel="noopener">Follow the store</a>
+          <a class="btn btn-o" href="https://www.ebay.com/cnt/intermediatedFAQ?requested=emiliohernz" target="_blank" rel="noopener">Contact us</a>
+        </div>
+      </div>
+      <div class="rep">
+        <div class="big">100%</div>
+        <div class="lbl">Positive seller feedback</div>
+        <div class="row"><span>Items sold</span><b>330+</b></div>
+        <div class="row"><span>Handling time</span><b>2 business days</b></div>
+        <div class="row"><span>Singles from</span><b>$0.99</b></div>
+        <a href="https://www.ebay.com/str/hernztcg?_tab=feedback" target="_blank" rel="noopener">★ Read our reviews</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section style="padding-top:8px">
+  <div class="wrap trust rv">
+    <div class="tr"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><b>Fast shipping</b><span>Out the door within 2 business days</span></div>
+    <div class="tr"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><b>Secure checkout</b><span>Covered by eBay buyer protection</span></div>
+    <div class="tr"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7L12 3Z"/></svg></div><b>Veteran-owned</b><span>Small business, real collectors</span></div>
+    <div class="tr"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11h6M11 8v6"/></svg></div><b>Trusted seller</b><span>100% positive feedback</span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:24px">
+  <div class="wrap">
+    <div class="shead rv" style="justify-content:center;text-align:center"><div><div class="eyebrow">Help</div><h2>Frequently asked questions</h2></div></div>
+    <div class="faq rv">
+      <details><summary>How do I buy a card?</summary><p>Every card links to its eBay listing. Checkout, payment, and buyer protection all run through eBay.</p></details>
+      <details><summary>How does the bundle discount work?</summary><p>Add eligible items to your cart: 2 items get 10% off, 3 get 15% off, and 4 or more get 20% off. Each listing shows whether it qualifies.</p></details>
+      <details><summary>How fast do orders ship?</summary><p>Orders ship within 2 business days of purchase.</p></details>
+      <details><summary>What do the conditions mean?</summary><p>Raw cards are listed as Near Mint, Lightly Played and so on. Graded cards are slabbed by PSA or CGC. Check the listing photos and condition notes before you buy.</p></details>
+      <details><summary>How do I reach you?</summary><p>Message us through eBay with the Contact button. We're happy to help with any card.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<div class="divider" aria-hidden="true"></div>
+<div class="join" style="border-top:0;background:#020202;position:relative;isolation:isolate">
+<div class="bandfx" aria-hidden="true"><div class="b-base"></div><div class="b-smoke"></div><canvas class="fx-sparks" data-n="40"></canvas></div>
+
+  <div class="wrap">
+    <h2>Never miss a drop</h2>
+    <p>New cards land daily. Follow the store on eBay to see them first.</p>
+    <a class="joinbar" href="https://www.ebay.com/str/hernztcg" target="_blank" rel="noopener"><span>Follow HERNZ TCG on eBay</span><i>→</i></a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="logo"><img class="logoimg lg" src="assets/hernz-logo.webp" alt="HERNZ TCG" width="640" height="428"></div>
+        <p style="color:var(--muted);max-width:300px">Veteran-owned trading card shop. Pokémon, Yu-Gi-Oh!, and One Piece singles, slabs and sealed.</p>
+        <a class="revbtn" href="https://www.ebay.com/str/hernztcg?_tab=feedback" target="_blank" rel="noopener"><span style="color:#facc15">★</span> Read our reviews</a>
+      </div>
+      <div><h5>Shop</h5><ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#featured">Pokémon</a></li>
+        <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Yu-Gi-Oh/_i.html?store_cat=86422975013">Yu-Gi-Oh!</a></li>
+        <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/One-Piece/_i.html?store_cat=86422976013">One Piece</a></li>
+        <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Graded-Cards/_i.html?store_cat=86415793013">Graded cards</a></li>
+        <li><a target="_blank" rel="noopener" href="https://www.ebay.com/str/hernztcg/Vintage/_i.html?store_cat=86415794013">Vintage</a></li>
+      </ul></div>
+      <div><h5>Explore</h5><ul>
+        <li><a href="#shop">Search</a></li>
+        <li><a href="#sets">Shop by set</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <li><a href="#about">Store info</a></li>
+        <li><a target="_blank" rel="noopener" href="https://www.ebay.com/cnt/intermediatedFAQ?requested=emiliohernz">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© <span id="yr">2026</span> HERNZ TCG. All purchases are completed on eBay.</span>
+      <span>Pokémon, Yu-Gi-Oh!, and One Piece are trademarks of their respective owners. HERNZ TCG is an independent reseller.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="page.js"></script>
+</body>
+</html>
